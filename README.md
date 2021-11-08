@@ -1,4 +1,4 @@
-# Randing rounding
+# Random rounding
 Random rounding of numbers with probability of ceiling vs flooring proportional to decimal. For Xiaoyan's code.
 
 ## Examples
