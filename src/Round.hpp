@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <random>
+#include <map>
 
 namespace randround {
 
@@ -22,6 +23,21 @@ namespace randround {
         } else {
             return floor; 
         }
+    }
+
+    template <typename RENG>
+    void plot(const double x, RENG& rng, int nRep) {
+        std::map<double, int> hist;
+        for(int n=0; n<nRep; ++n) {
+            ++hist[randround::round(x, rng)];
+        }
+
+        std::cout << "Random rounding of " << x << ":\n";
+        for(const auto& pair : hist) {
+        std::cout << std::setw(2) << pair.first
+                  << ' ' << std::string(pair.second/(nRep/25), '*') 
+                  << ' ' << 100.0 * pair.second / static_cast<double>(nRep) << '%' << '\n';
+    }
     }
 }
 
