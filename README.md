@@ -1,5 +1,5 @@
 # Random rounding
-Random rounding of numbers with probability of ceiling vs flooring proportional to decimal. For Xiaoyan's code.
+Random rounding of floating-point numbers with probability of ceiling vs flooring proportional to decimal. For Xiaoyan's code.
 
 ## Examples
 
@@ -15,6 +15,7 @@ Random rounding of numbers with probability of ceiling vs flooring proportional 
 
 ## Result
 
+```shell
 Random rounding of 7.5:  
  7 ************ 50.06%  
  8 ************ 49.94%  
@@ -24,3 +25,4 @@ Random rounding of 6.6:
 Random rounding of -2.3:  
 -3 ******* 30.17%  
 -2 ***************** 69.83%  
+```
