@@ -43,7 +43,7 @@ int main() {
 
     std::map<double, int> hist30;
     for(int n=0; n<10000; ++n) {
-        ++hist60[randround::round(num30, reng)];
+        ++hist30[randround::round(num30, reng)];
     }
 
     std::cout << "Random rounding of " << num30 << ":\n";

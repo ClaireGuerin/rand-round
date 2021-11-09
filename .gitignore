@@ -33,6 +33,7 @@
 
 # BUILD 
 build/
+main
 
 # VSCODE
 .vscode/
