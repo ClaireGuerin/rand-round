@@ -11,16 +11,16 @@ namespace randround {
         double floor;
         double dec = std::abs(std::modf(x, &floor));
         std::bernoulli_distribution bDist(dec);
-        auto floor_this = bDist(rng);
+        auto ceil_this = bDist(rng);
 
-        if (floor_this) {
-            return floor;
-        } else {
+        if (ceil_this) {
             if (floor < 0) {
                 return floor - 1;
             } else {
                 return floor + 1;
             }
+        } else {
+            return floor; 
         }
     }
 }

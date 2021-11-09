@@ -20,7 +20,8 @@ int main() {
     std::cout << "Random rounding of " << num50 << ":\n";
     for(const auto& pair : hist) {
         std::cout << std::setw(2) << pair.first
-                  << ' ' << std::string(pair.second/400, '*') << '\n';
+                  << ' ' << std::string(pair.second/400, '*') 
+                  << ' ' << pair.second/100.0 << '%' << '\n';
     }
 
 
@@ -35,7 +36,8 @@ int main() {
     std::cout << "Random rounding of " << num60 << ":\n";
     for(const auto& pair : hist60) {
         std::cout << std::setw(2) << pair.first
-                  << ' ' << std::string(pair.second/400, '*') << '\n';
+                  << ' ' << std::string(pair.second/400, '*')
+                  << ' ' << pair.second/100.0 << '%' << '\n';
     }
 
     // `-2.3` becomes -2 (floored) with 30% chance, and becomes -3 (ceiled) with 70% chance.
@@ -49,7 +51,8 @@ int main() {
     std::cout << "Random rounding of " << num30 << ":\n";
     for(const auto& pair : hist30) {
         std::cout << std::setw(2) << pair.first
-                  << ' ' << std::string(pair.second/400, '*') << '\n';
+                  << ' ' << std::string(pair.second/400, '*') 
+                  << ' ' << pair.second/100.0 << '%' << '\n';
     }
 
     return 0;
